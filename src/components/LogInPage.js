@@ -11,17 +11,23 @@ const LogInPage = () => {
   const [loginPassword, setLoginPassword] = useState("");
   const navigate = useNavigate(); 
   const login = async (event) => {
-    event.preventDefault(); 
+    event.preventDefault(); // Prevent form submission
+
+    if (!loginEmail.trim() || !loginPassword.trim()) {
+      alert("Please fill in all fields!");
+      return;
+    }
 
     try {
       await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
       alert("Login Successful!");
-      navigate("/homepage"); 
+      navigate("/homepage");
     } catch (error) {
       console.error("Login Error:", error.message);
       alert("Invalid email or password");
     }
-  };
+};
+
 
   return (
     <div className="login-container">
@@ -49,8 +55,7 @@ const LogInPage = () => {
         <a href="#" className="Forgot-Pass-Link">
           Forgot Password?
         </a>
-        <button className="login-button" type="submit"
-        onClick={()=> {navigate("/homepage")}}>
+        <button className="login-button" type="submit">
           Log In
         </button>
       </form>
