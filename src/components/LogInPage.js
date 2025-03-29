@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { auth } from "../FireBase/firebase"; 
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate, } from "react-router-dom";
+import { useNavigate, Link} from "react-router-dom";
 import "./LogInPage.css";
 import SocialLogIn from "./SocialLogIn";
 import InputField from "./InputField";
@@ -54,7 +54,7 @@ const LogInPage = () => {
       </form>
       <p className="signup-text">
         Don't have an account?
-        <a href="/signup"> Sign Up Now</a>
+        <Link to="/signup"> Sign Up Now</Link>
       </p>
     </div>
   );
