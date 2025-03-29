@@ -11,13 +11,11 @@ const LogInPage = () => {
   const [loginPassword, setLoginPassword] = useState("");
   const navigate = useNavigate(); 
   const login = async (event) => {
-    event.preventDefault(); // Prevent form submission
-
+    event.preventDefault();
     if (!loginEmail.trim() || !loginPassword.trim()) {
       alert("Please fill in all fields!");
       return;
     }
-
     try {
       await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
       alert("Login Successful!");
@@ -27,8 +25,6 @@ const LogInPage = () => {
       alert("Invalid email or password");
     }
 };
-
-
   return (
     <div className="login-container">
       <h2 className="form-title">Log in With</h2>
