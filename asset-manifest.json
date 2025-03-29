@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dsa-revision-platform/static/css/main.0591c358.css",
-    "main.js": "/dsa-revision-platform/static/js/main.2fbb0ede.js",
+    "main.js": "/dsa-revision-platform/static/js/main.9f97dd58.js",
     "static/js/453.db9d159c.chunk.js": "/dsa-revision-platform/static/js/453.db9d159c.chunk.js",
     "index.html": "/dsa-revision-platform/index.html",
     "main.0591c358.css.map": "/dsa-revision-platform/static/css/main.0591c358.css.map",
-    "main.2fbb0ede.js.map": "/dsa-revision-platform/static/js/main.2fbb0ede.js.map",
+    "main.9f97dd58.js.map": "/dsa-revision-platform/static/js/main.9f97dd58.js.map",
     "453.db9d159c.chunk.js.map": "/dsa-revision-platform/static/js/453.db9d159c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0591c358.css",
-    "static/js/main.2fbb0ede.js"
+    "static/js/main.9f97dd58.js"
   ]
 }
