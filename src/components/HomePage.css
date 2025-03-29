@@ -1,0 +1,129 @@
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: auto;
+  height: fit-content;
+}
+
+.heading{
+  margin-bottom: 20px;
+}
+.add-problem-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.add-problem-btn button:not(.close-btn),
+.get-button {
+  padding: 12px 20px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: #4f2fdb;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background 0.2s ease-in-out;
+}
+
+.get-button:not(.close-btn) {
+  margin-left: 10px;
+}
+
+.add-problem button:hover,
+.get-button:hover {
+  background: #3b24b3;
+}
+
+.table-container,
+.random-problem-container {
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-header,
+.table-row,
+.random-problem-header,
+.random-problem-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 2px solid #ddd;
+}
+
+.table-header,
+.random-problem-header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.table-row:last-child,
+.random-problem-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell {
+  flex: 3;
+  text-align: left;
+  padding: 12px;
+  word-wrap: break-word;
+}
+.table-cellaction{
+ margin-right: 45px;
+}
+
+.table-cellaction {
+  flex: 1;
+  text-align: right;
+  padding: 12px;
+}
+
+.solve-btn,
+.get-random-btn {
+  padding: 8px 16px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+.solve-btn,
+.get-random-btn{
+  margin-left: 73%;
+}
+
+.solve-btn:hover,
+.get-random-btn:hover {
+  background-color: #218838;
+}
+
+

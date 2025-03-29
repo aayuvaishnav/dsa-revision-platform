@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #edeef0;
+}
+
+#root {
+  width: 100%;
+  padding: 0 0.6rem;
+}
+
+.signup-container {
+  max-width: 410px;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container .form-title {
+  text-align: center;
+  font-size: 1.37rem;
+  font-weight: 600;
+  margin-bottom: 1.87rem;
+}
+
+.signup-form .input-wrapper {
+  height: 54px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.signup-form .input-wrapper .input-field {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 1.06rem;
+  border-radius: 0.31rem;
+  border: 1px solid #bfb3f2;
+  padding: 0 1.25rem 0 3.12rem;
+  transition: 0.2s ease;
+}
+
+.signup-form .input-wrapper .input-field:focus {
+  border-color: #5f41e4;
+}
+
+.signup-form .input-wrapper .input-field::placeholder {
+  color: #a395e0;
+}
+
+.signup-form .input-wrapper i {
+  color: #a395e0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s ease;
+}
+
+.signup-form .input-wrapper i:not(.eye-icon) {
+  left: 0.9rem;
+  pointer-events: none;
+}
+
+.signup-form .input-wrapper .input-field:focus ~ i:not(.eye-icon) {
+  color: #5f41e4;
+}
+
+.signup-form .input-wrapper i.eye-icon {
+  font-size: 1.25rem;
+  cursor: pointer;
+  right: 0.9rem;
+  display: none;
+}
+
+.signup-form .input-wrapper .input-field:valid ~ i.eye-icon {
+  display: block;
+}
+
+.signup-form .signup-button {
+  width: 100%;
+  height: 56px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.125rem;
+  background: #5f41e4;
+  margin-top: 2.19rem;
+  border-radius: 0.31rem;
+  transition: 0.2s ease;
+}
+
+.signup-form .signup-button:hover {
+  background: #4320df;
+}
+
+.signup-container .login-text {
+  text-align: center;
+  font-weight: 500;
+  margin: 1.75rem 0 0.31rem;
+}
+
+.signup-container a {
+  color: #5f41e4;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}
