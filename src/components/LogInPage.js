@@ -37,12 +37,14 @@ const LogInPage = () => {
           placeholder="Email Address"
           icon="mail"
           onChange={(event) => setLoginEmail(event.target.value)}
+          required
         />
         <InputField
           type="password"
           placeholder="Password"
           icon="lock"
           onChange={(event) => setLoginPassword(event.target.value)}
+          required
         />
         <a href="#" className="Forgot-Pass-Link">
           Forgot Password?

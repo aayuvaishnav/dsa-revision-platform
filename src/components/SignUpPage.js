@@ -38,18 +38,21 @@ const SignUpPage = () => {
           placeholder="Full Name"
           icon="person"
           onChange={(event) => setName(event.target.value)}
+          required
         />
         <InputField
           type="email"
           placeholder="Email Address"
           icon="mail"
           onChange={(event) => setEmail(event.target.value)}
+          required
         />
         <InputField
           type="password"
           placeholder="Password"
           icon="lock"
           onChange={(event) => setPassword(event.target.value)}
+          required
         />
         <button className="signup-button" type="submit">
           Sign Up
