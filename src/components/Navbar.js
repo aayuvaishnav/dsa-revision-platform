@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import { auth } from "../FireBase/firebase";
 import { signOut } from "firebase/auth";
 import "./Navbar.css";
@@ -13,6 +13,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((currentUser) => {
@@ -45,6 +46,8 @@ const Navbar = () => {
     }
   };
 
+  const isActive = (path) => location.pathname === path || location.hash === `#${path}`;
+
   return (
     <nav className="navbar">
       <div className="nav-brand">
@@ -53,6 +56,16 @@ const Navbar = () => {
       </div>
       {user && (
         <div className="nav-content">
+          <div className="nav-links">
+            <Link to="/homepage" className={`nav-link${isActive("/homepage") ? " active" : ""}`}>
+              <span className="material-symbols-rounded">home</span>
+              <span className="nav-link-text">Home</span>
+            </Link>
+            <Link to="/dashboard" className={`nav-link${isActive("/dashboard") ? " active" : ""}`}>
+              <span className="material-symbols-rounded">bar_chart</span>
+              <span className="nav-link-text">Dashboard</span>
+            </Link>
+          </div>
           <button
             type="button"
             className="theme-toggle"

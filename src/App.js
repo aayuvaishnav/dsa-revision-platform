@@ -5,6 +5,7 @@ import SignUpPage from "./components/SignUpPage";
 import HomePage from "./components/HomePage";
 import ForgotPassword from "./components/ForgotPassword";
 import SettingsPage from "./components/SettingsPage";
+import DashboardPage from "./components/DashboardPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
@@ -19,6 +20,14 @@ function App() {
           element={
             <ProtectedRoute>
               <SettingsPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <DashboardPage />
             </ProtectedRoute>
           }
         />

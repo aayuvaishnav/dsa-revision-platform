@@ -55,6 +55,56 @@
   gap: 12px;
 }
 
+/* ── NAV LINKS ───────────────────────────────────────────────────── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: 8px;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-link .material-symbols-rounded {
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.nav-link.active {
+  background: rgba(99, 102, 241, 0.18);
+  color: #c7d2fe;
+}
+
+@media (max-width: 600px) {
+  .nav-link-text {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 6px 8px;
+  }
+
+  .nav-links {
+    gap: 2px;
+    margin-right: 4px;
+  }
+}
+
 /* ── THEME TOGGLE ────────────────────────────────────────────────── */
 .theme-toggle {
   width: 38px;
