@@ -7,6 +7,7 @@ import Popup from "./PopUp";
 import ConfirmDialog from "./ConfirmDialog";
 import { useToast } from "./Toast";
 import { getRevisionDays } from "../utils/settings";
+import AIChatbot from "./AIChatbot";
 
 const predefinedTopics = [
   "Array", "String", "Linked List", "Stack", "Queue", "Tree", "Graph",
@@ -769,6 +770,7 @@ const HomePage = () => {
           <p className="login-prompt">Please log in to add and view your questions.</p>
         )}
       </div>
+      {user && <AIChatbot questionContext={randomQuestion} />}
     </div>
   );
 };
